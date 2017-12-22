@@ -1878,10 +1878,14 @@ debug_output("in funcbody: goto main", p);
 			docuextra_.push_back(std::string("@note This class has the class property 'Sealed' and cannot be derived from."));
 		   }
 		  )
-
 		  |( 'Hidden'i
 		  @{
 			docuextra_.push_back(std::string("@note This class has the class property 'Hidden' and is invisible."));
+		   }
+		  )
+			|( 'InferiorClasses'i
+		  @{
+			docuextra_.push_back(std::string("@note This class has the class property 'InferiorClasses' and is dominant with respect to several classes. Consult the source code for more details."));
 		   }
 		  )
 		  |( 'Abstract'i
